@@ -21,7 +21,7 @@ fi
 
 SLOT="0"
 LICENSE="GPL-3"
-RDEPEND="x11-wm/i3"
+RDEPEND="x11-wm/i3-gaps"
 DEPEND="${RDEPEND}
 	app-text/ronn
 	"
