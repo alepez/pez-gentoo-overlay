@@ -10,7 +10,7 @@ DESCRIPTION="An improved dynamic tiling window manager"
 HOMEPAGE="https://github.com/Airblader/i3"
 SRC_URI=""
 EGIT_REPO_URI="git://github.com/Airblader/i3"
-EGIT_BRANCH="next"
+EGIT_BRANCH="gaps-next"
 
 LICENSE="BSD"
 SLOT="0"
