@@ -1,0 +1,18 @@
+diff --git a/auto.def b/auto.def
+index 1d492ff2..5a762478 100644
+--- a/auto.def
++++ b/auto.def
+@@ -500,8 +500,10 @@ switch [opt-val with-ui ncurses] {
+     }
+ 
+     cc-with [list -libs -L$ncurses_prefix/lib] {
+-      if {![cc-check-function-in-lib tgetent $ncurses_lib]} {
+-        cc-check-function-in-lib tgetent tinfo
++      msg-checking "Libraries for tgetent"
++      msg-result   "[get-define LDFLAGS] [get-define LIBS]"
++      if {![cc-check-function-in-lib tgetent tinfow]} {
++        cc-check-function-in-lib tgetent $ncurses_lib
+       }
+       foreach f {start_color typeahead bkgdset curs_set meta use_default_colors} {
+         cc-check-function-in-lib $f $ncurses_lib
+
